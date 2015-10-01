@@ -2,7 +2,7 @@ module Imessage
   class Sender
     def deliver(options = {text:nil, attachment:nil, contacts: []})
       if options[:text].nil? && options[:attachment].nil?
-        raise "You must specific at least a text or attachment."
+        raise "You must specific a message, either a text or file attachment."
       end
 
       if options[:contacts].empty?
@@ -17,18 +17,8 @@ module Imessage
     private
 
     def _deliver(text, attachment, contact)
-      if text && attachment
-        deliver_text_and_attachment(text, attachment, contact)
-      elsif text
-        deliver_text(text, contact)
-      elsif attachment
-        deliver_attachment(attachment, contact)
-      end
-    end
-
-    def deliver_text_and_attachment(text, attachment, contact)
-      deliver_text(text, contact)
-      deliver_attachment(attachment, contact)
+      deliver_text(text, contact) if text
+      deliver_attachment(attachment, contact) if attachment
     end
 
     def deliver_attachment(attachment, contact)

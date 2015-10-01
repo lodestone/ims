@@ -6,12 +6,12 @@ require 'imessage/version'
 Gem::Specification.new do |spec|
   spec.name          = "imessage"
   spec.version       = Imessage::VERSION
-  spec.authors       = ["Jun Lin"]
-  spec.email         = ["linjunpop@gmail.com"]
+  spec.authors       = ["Jun Lin", "Matt Petty"]
+  spec.email         = ["matt@kizmeta.com"]
 
   spec.summary       = "Command line tool to send iMessage."
   spec.description   = "Command line tool to send iMessage."
-  spec.homepage      = "https://github.com/linjunpop/imessage"
+  spec.homepage      = "https://github.com/lodestone/imessage"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

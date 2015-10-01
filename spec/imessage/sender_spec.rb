@@ -15,17 +15,11 @@ describe Imessage::Sender do
       sender.deliver(attachment: 'README.md', contacts: ['foo@example.com'])
     end
 
-    it 'deliver with text and attachment' do
-      sender = Imessage::Sender.new
-      expect(sender).to receive(:deliver_text_and_attachment).with('hello', 'README.md', 'foo@example.com')
-      sender.deliver(text: 'hello', attachment: 'README.md', contacts: ['foo@example.com'])
-    end
-
     it 'deliver nothing' do
       sender = Imessage::Sender.new
       expect {
         sender.deliver(text: nil, attachment: nil, contacts: ['foo@example.com'])
-      }.to raise_error('You must specific at least a text or attachment.')
+      }.to raise_error('You must specific a message, either a text or file attachment.')
     end
   end
 end

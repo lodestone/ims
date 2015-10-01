@@ -24,33 +24,28 @@ module Imessage
           opts.separator ""
           opts.separator "Specific options:"
 
-          opts.on("-t", "--text [TEXT]", String, "The TEXT to deliver") do |text|
-            args.text = text
-          end
-
-          opts.on("-a", "--attachment [ATTACHMENT]", String, "Add an attachment") do |attachment|
-            if File.exists?(attachment)
-              args.attachment = File.expand_path(attachment)
-            else
-              puts "Can not find file #{attachment}"
-              exit(1)
-            end
-          end
-
-          opts.on("-c", "--contacts x,y,z", Array, "Deliver message to these CONTACTS") do |contacts|
+          opts.on("-t", "--to x,y,z", Array, "Deliver message TO these contacts") do |contacts|
             args.contacts = contacts
+          end
+
+          opts.on("-m", "--message [MESSAGE]", String, "The MESSAGE to deliver") do |mesg|
+            if File.exists?(mesg)
+              args.attachment = File.expand_path(mesg)
+            else
+              args.text = mesg
+            end
           end
 
           opts.separator ""
           opts.separator "Common options:"
 
-          opts.on("-h", "--help", "Prints this help") do
-            puts opts
+          opts.on("-v", "--version", "Show version") do
+            puts "imessage v#{Imessage::VERSION}"
             exit
           end
 
-          opts.on_tail("--version", "Show version") do
-            puts "imessage v#{Imessage::VERSION}"
+          opts.on("-h", "--help", "Prints this help") do
+            puts opts
             exit
           end
         end
