@@ -33,9 +33,8 @@ Or install it yourself as:
 Usage: imessage [options]
 
 Specific options:
-    -t, --text [TEXT]                The TEXT to deliver
-    -a, --attachment [ATTACHMENT]    Add an attachment
-    -c, --contacts x,y,z             Deliver message to these CONTACTS
+    -m, --message [MESSSAGE|ATTACHMENT] The MESSAGE to deliver
+    -t, --to x,y,z                      Deliver message TO these contacts
 
 Common options:
     -h, --help                       Prints this help
@@ -45,7 +44,8 @@ Common options:
 ## Example
 
 ```
-$ imessage --text "hello" --contacts "foo@example.com" --attachment 'bar.png'
+$ imessage -m "hello" -t "foo@example.com"
+$ imessage --message '/path/to/bar.png' --to "foo@example.com,+15555555555"
 ```
 
 ## [Changelog](CHANGELOG.md)
@@ -59,4 +59,3 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/linjunpop/imessage.
-
