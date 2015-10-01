@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'imsg/version'
+require 'ims/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "imsg"
-  spec.version       = Imsg::VERSION
+  spec.name          = "ims"
+  spec.version       = Ims::VERSION
   spec.authors       = ["Matt Petty"]
   spec.email         = ["matt@kizmeta.com"]
 
   spec.summary       = "Command line tool to send iMessage."
   spec.description   = "Command line tool to send iMessage."
-  spec.homepage      = "https://github.com/lodestone/imsg"
+  spec.homepage      = "https://github.com/lodestone/ims"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

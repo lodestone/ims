@@ -2,7 +2,7 @@
 
 ## master
 
-## [v0.8.0](https://github.com/lodestone/imessage/tree/v0.8.0)
+## [v0.8.0](https://github.com/lodestone/ims/tree/v0.8.0)
 
 * Initial revamp and retooling of this code.
 

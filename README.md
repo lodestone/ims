@@ -22,7 +22,7 @@ Command line tool to send iMessage.
 
 Add this line to your application's Gemfile:
 
-    gem 'imsg'
+    gem 'ims'
 
 And then execute:
 
@@ -30,12 +30,12 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install imsg
+    $ gem install ims
 
 ## Usage
 
 ```shell
-Usage: imsg [options]
+Usage: ims [options]
 
 Specific options:
     -m, --message [MESSSAGE|ATTACHMENT] The MESSAGE to deliver
@@ -49,8 +49,8 @@ Common options:
 ## Example
 
 ```
-$ imsg -m "hello" -t "foo@example.com"
-$ imsg --message '/path/to/bar.png' --to "foo@example.com,+15555555555"
+$ ims -m "hello" -t "foo@example.com"
+$ ims --message '/path/to/bar.png' --to "foo@example.com,+15555555555"
 ```
 
 ## [Changelog](CHANGELOG.md)
