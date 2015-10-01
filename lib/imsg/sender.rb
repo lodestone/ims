@@ -1,4 +1,4 @@
-module Imessage
+module Imsg
   class Sender
     def deliver(options = {text:nil, attachment:nil, contacts: []})
       if options[:text].nil? && options[:attachment].nil?

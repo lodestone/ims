@@ -2,6 +2,10 @@
 
 ## master
 
+## [v0.8.0](https://github.com/lodestone/imessage/tree/v0.8.0)
+
+* Initial revamp and retooling of this code.
+
 ## [v0.3.1](https://github.com/linjunpop/imessage/tree/v0.3.1)
 
 * Skip dev tasks when being installed by Homebrew

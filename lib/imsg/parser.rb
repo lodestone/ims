@@ -1,7 +1,7 @@
 require 'optparse'
 require 'ostruct'
 
-module Imessage
+module Imsg
   class Parser
     class << self
       def parse(options)
@@ -19,7 +19,7 @@ module Imessage
 
       def opt_parser(args)
         OptionParser.new do |opts|
-          opts.banner = "Usage: imessage [options]"
+          opts.banner = "Usage: imsg [options]"
 
           opts.separator ""
           opts.separator "Specific options:"
@@ -40,7 +40,7 @@ module Imessage
           opts.separator "Common options:"
 
           opts.on("-v", "--version", "Show version") do
-            puts "imessage v#{Imessage::VERSION}"
+            puts "imessage v#{Imsg::VERSION}"
             exit
           end
 

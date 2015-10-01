@@ -2,22 +2,27 @@
 
 Command line tool to send iMessage.
 
+*(This is a fork of https://github.com/linjunpop/imessage)*
+
+<!--
 [![Build Status](https://travis-ci.org/linjunpop/imessage.png?branch=master)](https://travis-ci.org/linjunpop/imessage)
 [![Gem Version](https://badge.fury.io/rb/imessage.png)](http://badge.fury.io/rb/imessage)
 [![Code Climate](https://codeclimate.com/github/linjunpop/imessage.png)](https://codeclimate.com/github/linjunpop/imessage)
-
+-->
 
 ## Installation
 
+<!--
 ### As a Homebrew(http://brew.sh) package
 
     $ brew install imessage-ruby
+-->
 
 ### As a gem
 
 Add this line to your application's Gemfile:
 
-    gem 'imessage'
+    gem 'imsg'
 
 And then execute:
 
@@ -25,12 +30,12 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install imessage
+    $ gem install imsg
 
 ## Usage
 
 ```shell
-Usage: imessage [options]
+Usage: imsg [options]
 
 Specific options:
     -m, --message [MESSSAGE|ATTACHMENT] The MESSAGE to deliver
@@ -44,8 +49,8 @@ Common options:
 ## Example
 
 ```
-$ imessage -m "hello" -t "foo@example.com"
-$ imessage --message '/path/to/bar.png' --to "foo@example.com,+15555555555"
+$ imsg -m "hello" -t "foo@example.com"
+$ imsg --message '/path/to/bar.png' --to "foo@example.com,+15555555555"
 ```
 
 ## [Changelog](CHANGELOG.md)
@@ -58,4 +63,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/linjunpop/imessage.
+Bug reports and pull requests are welcome on GitHub at https://github.com/lodestone/imsg.
