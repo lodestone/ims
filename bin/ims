@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/imsg'
+require_relative '../lib/ims'
 
 ARGV << '--help' if ARGV.empty?
 
-options = Imsg::Parser.parse(ARGV)
+options = Ims::Parser.parse(ARGV)
 
-sender = Imsg::Sender.new
+sender = Ims::Sender.new
 sender.deliver({
   text: options.text,
   attachment: options.attachment,
