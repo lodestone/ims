@@ -4,9 +4,9 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'imessage/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "imessage"
+  spec.name          = "imsg"
   spec.version       = Imessage::VERSION
-  spec.authors       = ["Jun Lin", "Matt Petty"]
+  spec.authors       = ["Matt Petty", "Jun Lin"]
   spec.email         = ["matt@kizmeta.com"]
 
   spec.summary       = "Command line tool to send iMessage."
